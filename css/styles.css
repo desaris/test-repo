@@ -1,0 +1,577 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gilroy', Arial, sans-serif;
+    background-color: #0B0F1E;
+    color: #FFFFFF;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+/* БЭМ блок hero */
+.hero {
+    width: 100%;
+    height: 487px;
+    position: relative;
+    background: radial-gradient(50% 50% at 50% 50%, #123027 0%, #0b0f1e 100%);
+    overflow: hidden;
+    z-index: 2;
+    
+}
+
+.reports-section {
+    background-color: #FFFFFF;
+}
+.hero__background {
+    background-image: url('images/bg.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+    
+}
+
+/* БЭМ элемент hero__background */
+
+/* БЭМ элемент hero__gradient-bottom */
+.hero__gradient-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(13, 24, 33, 0) 0%, rgba(12, 17, 31, 0.9) 51.64%, #0B0F1E 100%);
+}
+
+/* БЭМ элемент hero__gradient-right */
+.hero__gradient-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to left, #0B0F1E 100%, rgba(11, 15, 30, 0) 0%);
+}
+
+/* БЭМ блок header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+}
+
+/* БЭМ элемент header__content */
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* БЭМ элемент header__logo */
+.header__logo {
+    display: block;
+}
+
+.header__logo-img {
+    height: 38px;
+    width: auto;
+}
+
+/* БЭМ блок main-nav */
+.main-nav {
+    display: flex;
+    gap: 40px;
+}
+
+/* БЭМ элемент main-nav__link */
+.main-nav__link {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.main-nav__link:hover {
+    opacity: 0.8;
+}
+
+/* БЭМ элемент header__button */
+.header__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #304031;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+    color: #05160d;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.header__button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* БЭМ элемент header__border */
+.header__border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #304031;
+    z-index: 10;
+}
+
+/* БЭМ блок hero-content */
+.hero-content {
+    position: relative;
+    z-index: 5;
+    padding-top: 157px;
+    padding-left: 0;
+}
+
+/* БЭМ элемент hero-content__title */
+.hero-content__title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 86px;
+    line-height: 1.16;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+/* БЭМ элемент hero-content__breadcrumbs */
+.hero-content__breadcrumbs {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    opacity: 0.8;
+    margin-bottom: 100px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.21;
+    text-transform: uppercase;
+    color: #282A32;
+    margin-bottom: 20px;
+    padding-bottom: 54px;
+    border-bottom: 1px solid #282A32;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card__icon-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.feature-card__icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: #F2F2F5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.feature-card__icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-card__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.21;
+    color: #282A32;
+    margin-bottom: 12px;
+}
+
+.feature-card__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #282A32;
+    margin-bottom: 20px;
+}
+
+.feature-card__image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: auto;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Стили для второй секции */
+.reports-card {
+    background-color: #F2F2F5;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.reports-card__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.21;
+    color: #282A32;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.reports-card__description {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.15;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.reports-card__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 40px;
+    background-color: #0B0F1E;
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 16px;
+}
+
+.reports-card__button:hover {
+    background-color: #1A1F30;
+}
+
+.reports__row {
+    display: flex;
+}
+
+.reports-img {
+    display: flex;
+}
+
+.reports-img img {
+    align-self: center;
+}
+
+.calculation-section {
+    background: #f2f2f5;
+}
+
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reports__row {
+        flex-wrap: wrap;
+    }
+
+    .reports-img {
+        align-self: center;
+    }
+
+    .reports-img img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-card {
+        padding: 20px;
+    }
+
+    .reports-card {
+        padding: 20px;
+    }
+}
+
+/* Стили для секции "Сервисные функции" */
+.service-section {
+    background-color: #FFFFFF;
+    padding: 80px 0;
+    position: relative;
+}
+
+.service-section .section-title {
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 1%;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    border-bottom: 0px;
+}
+
+.service-card {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: #FEFEFE;
+    overflow: hidden;
+}
+
+.service-card__content {
+    position: relative;
+    z-index: 2;
+    padding: 50px;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card__features {
+    margin-bottom: 30px;
+}
+
+.service-feature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.service-feature__icon {
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.service-feature__circle {
+    width: 30px;
+    height: 30px;
+    background-color: #E9EDF3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-feature__check {
+    width: 14px;
+    height: 14px;
+}
+
+.service-feature__text {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #282A32;
+}
+
+.service-card__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 40px;
+    background-color: #0B0F1E;
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.service-card__button:hover {
+    background-color: #1A1F30;
+}
+
+.service-card__image {
+    position: relative;
+    z-index: 1;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.macbook-image {
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.service-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.service-watermark__text {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 1.22;
+    letter-spacing: 2%;
+    text-transform: uppercase;
+    color: #939393;
+    opacity: 0.7;
+}
+
+@media (max-width: 992px) {
+    .service-card {
+        flex-direction: column-reverse;
+    }
+
+    .service-card__content,
+    .service-card__image {
+        max-width: 100%;
+        padding: 30px;
+    }
+
+    .service-watermark {
+        display: none;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reports__row {
+        flex-wrap: wrap;
+    }
+
+    .reports-img {
+        align-self: center;
+    }
+}
+
+/* Прелоадер */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0B0F1E;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
